@@ -13,13 +13,44 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue[700],
       ),
-      body: Center(
-        child: Image(
-            image: NetworkImage('http://pngimg.com/uploads/alien/alien_PNG63.png'),
-        ),
+      body: Row(
+        children: <Widget>[
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: Text(
+                  '1'
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.orange,
+              child: Text(
+                  '2'
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(  
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text(
+                  '3'
+              ),
+            ),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          print('And here!');
+        },
         child: Text('Alien'),
         backgroundColor: Colors.blue[700],
       ),
